@@ -3,38 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cookie Clicker</title>
+    <title>Future Dolphin's Bäckerei</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="app">
-      <header class="topbar">
-        <div>
-          <p class="label">Cookies</p>
-          <h1 id="cookies">0</h1>
+    <div class="page-shell">
+      <aside class="left-panel panel">
+        <div class="label-box">
+          <span class="title">Future Dolphin's Bäckerei</span>
         </div>
-        <div class="stats">
-          <div>
-            <span class="label">Pro Klick</span>
-            <strong id="per-click">1</strong>
-          </div>
-          <div>
-            <span class="label">Pro Sekunde</span>
-            <strong id="cps">0</strong>
-          </div>
-        </div>
-      </header>
 
-      <main class="game-area">
-        <button id="cookie-btn" class="cookie-btn" aria-label="Cookie klicken">
-          <span class="cookie-icon">🍪</span>
+        <div class="cookie-counter">
+          <h1 id="cookie-count">0 Kekse</h1>
+          <p>per second: <span id="cookies-per-second">0</span></p>
+        </div>
+
+        <button id="cookie-button" class="cookie-button" aria-label="Cookie klicken">
+          <span class="cookie-glow"></span>
+          <span class="cookie-body">
+            <span class="chip chip-1"></span>
+            <span class="chip chip-2"></span>
+            <span class="chip chip-3"></span>
+            <span class="chip chip-4"></span>
+            <span class="chip chip-5"></span>
+          </span>
         </button>
+      </aside>
 
-        <section class="shop">
-          <h2>Shop</h2>
-          <div id="shop"></div>
-        </section>
+      <main class="center-panel panel">
+        <div class="toolbar">
+          <button>Optionen</button>
+          <button>Statistiken</button>
+          <button>Verwaltung</button>
+        </div>
+
+        <div class="message-banner">
+          Du hast Lust, Kekse zu backen. Aber niemand will deine Kekse essen.
+        </div>
+
+        <div class="wood-beam wood-top"></div>
+        <div class="wood-beam wood-bottom"></div>
       </main>
+
+      <aside class="right-panel panel">
+        <div class="info-card">
+          <div class="info-head">Info</div>
+          <h2>Dell Universum entdecken</h2>
+          <div class="info-cta">
+            <span>Unterstützen Sie Ihre Kinder mit Dell Technologien und Expertise</span>
+            <button aria-label="Weiter">›</button>
+          </div>
+        </div>
+
+        <div class="shop-card">
+          <div class="shop-header">Shop</div>
+
+          <div class="shop-row">
+            <div class="shop-meta">
+              <span class="label">Kaufen</span>
+              <span class="label">Verkaufen</span>
+            </div>
+            <div class="shop-controls">
+              <span>1</span>
+              <span>10</span>
+              <span>100</span>
+            </div>
+          </div>
+
+          <div class="shop-item">
+            <div class="shop-icon">???</div>
+            <div class="shop-info">
+              <div class="shop-name">???</div>
+              <div class="shop-price">x10 <span>€ 117.431 million</span></div>
+            </div>
+          </div>
+
+          <div class="shop-item">
+            <div class="shop-icon">???</div>
+            <div class="shop-info">
+              <div class="shop-name">???</div>
+              <div class="shop-price">x100 <span>€ 782.875 million</span></div>
+            </div>
+          </div>
+        </div>
+      </aside>
     </div>
 
     <script src="script.js"></script>
