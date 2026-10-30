@@ -1,1 +1,350 @@
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: #0b4056;
+  color: #edf7ff;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font: inherit;
+}
+
+.page-shell {
+  display: grid;
+  grid-template-columns: 1.12fr 2.15fr 0.8fr;
+  width: 100%;
+  min-height: 100vh;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03) 2px,
+      transparent 2px,
+      transparent 7px
+    ),
+    linear-gradient(180deg, #0c5770 0%, #0b4762 100%);
+  overflow: hidden;
+}
+
+.panel {
+  position: relative;
+}
+
+.left-panel {
+  padding: 18px 18px 0 18px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.label-box {
+  display: inline-block;
+  padding: 10px 18px 8px;
+  margin-left: 10px;
+  background: rgba(4, 27, 35, 0.35);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.06);
+}
+
+.title {
+  color: #f2f0eb;
+  font-size: 2.2rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.25);
+}
+
+.cookie-counter {
+  margin-top: 26px;
+  padding-left: 10px;
+}
+
+.cookie-counter h1 {
+  margin: 0;
+  font-size: 3.2rem;
+  line-height: 1;
+  color: #f2f0eb;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.25);
+}
+
+.cookie-counter p {
+  margin: 10px 0 0;
+  color: #dcebf3;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+
+.cookie-button {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.08s ease;
+}
+
+.cookie-button:active {
+  transform: scale(0.97);
+}
+
+.cookie-glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 220px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(255,255,255,0.15) 38%, rgba(255,255,255,0) 70%);
+  filter: blur(10px);
+}
+
+.cookie-body {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 240px;
+  height: 240px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c99548 0%, #b38743 32%, #8e622f 100%);
+  box-shadow:
+    inset -18px -18px 26px rgba(89, 44, 18, 0.5),
+    inset 18px 18px 20px rgba(255, 231, 180, 0.25),
+    0 16px 30px rgba(0,0,0,0.25);
+  border: 7px solid rgba(83, 46, 19, 0.23);
+}
+
+.cookie-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 32%, rgba(255,255,255,0.2), transparent 20%);
+}
+
+.chip {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #4e1f12 0%, #2a130d 60%, #120905 100%);
+  box-shadow: inset -6px -8px 0 rgba(0,0,0,0.22);
+}
+
+.chip-1 { top: 44px; left: 52px; }
+.chip-2 { top: 76px; right: 60px; }
+.chip-3 { bottom: 68px; left: 68px; }
+.chip-4 { bottom: 54px; right: 62px; }
+.chip-5 { left: 110px; top: 116px; }
+
+.center-panel {
+  background: linear-gradient(180deg, rgba(14, 125, 170, 0.22), rgba(8, 69, 89, 0.15));
+  border-left: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  gap: 12px;
+}
+
+.toolbar button {
+  min-width: 120px;
+  padding: 10px 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(7, 45, 58, 0.35);
+  color: #f1f5f6;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+.message-banner {
+  position: relative;
+  margin: 26px auto 0;
+  width: min(95%, 760px);
+  padding: 16px 28px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #f5f6f7;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  box-shadow: inset 0 0 20px rgba(255,255,255,0.03);
+}
+
+.wood-beam {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  background: linear-gradient(180deg, #8a5630 0%, #643a1e 100%);
+  box-shadow: inset 0 0 0 2px rgba(30, 15, 7, 0.35);
+  border-top: 2px solid rgba(54, 27, 12, 0.8);
+  border-bottom: 2px solid rgba(54, 27, 12, 0.8);
+}
+
+.wood-top {
+  top: 120px;
+}
+
+.wood-bottom {
+  bottom: 120px;
+}
+
+.right-panel {
+  padding: 16px 16px 14px;
+  background: rgba(5, 33, 42, 0.28);
+  border-left: 1px solid rgba(255,255,255,0.08);
+}
+
+.info-card,
+.shop-card {
+  background: rgba(10, 39, 49, 0.72);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  box-shadow: inset 0 0 18px rgba(255,255,255,0.05);
+}
+
+.info-card {
+  padding: 14px 16px 18px;
+  margin-bottom: 18px;
+}
+
+.info-head {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  background: rgba(255,255,255,0.04);
+}
+
+.info-card h2 {
+  margin: 18px 0 14px;
+  color: #f2f0eb;
+  font-size: 2.1rem;
+  line-height: 1.06;
+}
+
+.info-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #edf6fb;
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.info-cta button {
+  width: 54px;
+  height: 54px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.88);
+  color: #1a2d34;
+  font-size: 2.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.shop-card {
+  padding: 18px 16px 12px;
+}
+
+.shop-header {
+  font-size: 2.25rem;
+  text-align: center;
+  color: #f2eee6;
+  margin-bottom: 12px;
+}
+
+.shop-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d7ebf4;
+}
+
+.shop-meta,
+.shop-controls {
+  display: flex;
+  gap: 16px;
+}
+
+.shop-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  margin-bottom: 10px;
+}
+
+.shop-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.08);
+  font-size: 1.6rem;
+  color: #eaf8ff;
+}
+
+.shop-name {
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  color: #f7f2e6;
+}
+
+.shop-price {
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: #d8edf7;
+}
+
+@media (max-width: 1100px) {
+  .page-shell {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .left-panel,
+  .right-panel,
+  .center-panel {
+    min-height: auto;
+  }
+
+  .cookie-button {
+    width: 220px;
+    height: 220px;
+  }
+
+  .cookie-body {
+    width: 180px;
+    height: 180px;
+  }
+}
