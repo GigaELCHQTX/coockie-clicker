@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <p class="label">Cookies</p>
+          <h1 id="cookies">0</h1>
+        </div>
+        <div class="stats">
+          <div>
+            <span class="label">Pro Klick</span>
+            <strong id="per-click">1</strong>
+          </div>
+          <div>
+            <span class="label">Pro Sekunde</span>
+            <strong id="cps">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="game-area">
+        <button id="cookie-btn" class="cookie-btn" aria-label="Cookie klicken">
+          <span class="cookie-icon">🍪</span>
+        </button>
+
+        <section class="shop">
+          <h2>Shop</h2>
+          <div id="shop"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
